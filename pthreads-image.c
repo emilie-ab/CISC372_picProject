@@ -68,6 +68,7 @@ void* convoluteThread(void* threadArgs) {
             (*my_thread).dst->data[Index(pix,(*my_thread).row,(*my_thread).src->width,bit,(*my_thread).src->bpp)]=getPixelValue((*my_thread).src,pix,(*my_thread).row,bit,(*my_thread).alg);
         }
     }
+    free(threadArgs);
     return NULL;
 }
 
@@ -86,7 +87,6 @@ void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
         struct ThreadArgs *threadArgs = malloc(sizeof(struct ThreadArgs));
         (*threadArgs).src = srcImage;
         (*threadArgs).dst = destImage;
-        //(*threadArgs).alg = algorithm;
         (*threadArgs).row = row;
         for (pix = 0; pix < 3; pix++) {
             for (bit = 0; bit < 3; bit++) {
