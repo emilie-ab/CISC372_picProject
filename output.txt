@@ -1,0 +1,9 @@
+Script started on Mon Oct 30 17:56:09 2023
+]0;emiliea@r1n00.darwin:~/CISC372_picProject[?1034h[emiliea@r1n00 CISC372_picProject]$ srun ./openmp-      mp-image pic1.jpg edge
+Took 7 seconds
+]0;emiliea@r1n00.darwin:~/CISC372_picProject[emiliea@r1n00 CISC372_picProject]$ srun ./pthreads-image [ pic1.jpg edge
+Took 7 seconds
+]0;emiliea@r1n00.darwin:~/CISC372_picProject[emiliea@r1n00 CISC372_picProject]$ exit
+exit
+
+Script done on Mon Oct 30 17:57:05 2023
